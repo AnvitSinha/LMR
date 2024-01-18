@@ -5,4 +5,4 @@ point circumcenter (cp a, cp b, cp c) {
 	point p = b - a, q = c - a, s (dot (p, p) / 2, dot (q, q) / 2);
 	return a + point (det (s, point (p.y, q.y)), det (point (p.x, q.x), s)) / det (p, q); }
 point orthocenter (cp a, cp b, cp c) { return a + b + c - circumcenter (a, b, c) * 2; }
-
+point centroid(cp a, cp b, cp c) {return point((a.x + b.x + c.x) / 3, (a.y + b.y + c.y) / 3);}
